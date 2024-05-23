@@ -15,6 +15,9 @@
   import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
   const BottomTab = createBottomTabNavigator();
 
+
+  
+
   // Importândo as telas
   import Home from './src/screens/Home'
   import Loading from './src/screens/Loading'
@@ -77,7 +80,7 @@
       })
     }
 
-    // Chamando a funcao de captura do token
+    // Chamando a funcao de captura do token teste
     useEffect(() => {
       _getApiSpotifyToken();
 
@@ -135,6 +138,7 @@
               }
             })}
           >
+        
             <BottomTab.Screen name="Home">
               {(props) => <Home {...props} token={token} setAtual={setAtual} atual={atual} audio={audio} setAudio={setAudio}/>}
             </BottomTab.Screen>
